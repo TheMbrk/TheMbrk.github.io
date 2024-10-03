@@ -3,197 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mark Cyril Tubera - Software Engineer and API Integration Specialist">
     <title>Mark Cyril Tubera - Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #3b82f6;
-            --secondary-color: #1f2937;
-            --text-color: #4b5563;
-            --background-color: #f3f4f6;
-            --card-background: white;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        .container {
-            min-height: 100vh;
-            padding: 3rem 1rem;
-            box-sizing: border-box;
-        }
-        .portfolio {
-            max-width: 64rem;
-            margin: 0 auto;
-            background-color: var(--card-background);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        header {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin: 0;
-        }
-        .job-title {
-            font-size: 1.5rem;
-            margin-top: 0.75rem;
-            color: #9ca3af;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-        .social-links a {
-            margin: 0 0.75rem;
-            color: #d1d5db;
-            transition: color 0.3s, transform 0.3s;
-        }
-        .social-links a:hover {
-            color: white;
-            transform: scale(1.1);
-        }
-        main {
-            padding: 2rem;
-        }
-        section {
-            margin-bottom: 3rem;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        h2 {
-            font-size: 1.875rem;
-            font-weight: bold;
-            color: var(--secondary-color);
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-        p {
-            font-size: 1.125rem;
-            color: var(--text-color);
-            line-height: 1.625;
-        }
-        .experience-item, .education-item {
-            margin-top: 1.5rem;
-        }
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin: 0;
-        }
-        h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-color);
-            margin: 1rem 0 0.5rem;
-        }
-        .company, .university {
-            font-size: 1.125rem;
-            color: #6b7280;
-            margin-top: 0.5rem;
-        }
-        ul {
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-            position: relative;
-        }
-        li::before {
-            content: '•';
-            color: var(--primary-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .skill-category {
-            flex: 1 1 300px;
-            margin-bottom: 1.5rem;
-        }
-        .skill-category h3 {
-            margin-bottom: 0.75rem;
-            color: var(--primary-color);
-        }
-        .skill {
-            background-color: #e5e7eb;
-            border-radius: 9999px;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-color);
-            transition: background-color 0.3s, transform 0.3s;
-            display: inline-block;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .skill:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: scale(1.05);
-        }
-        #themeToggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #themeToggle:hover {
-            background-color: var(--primary-color);
-        }
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .job-title {
-                font-size: 1.25rem;
-            }
-            main {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <button id="themeToggle">🌓</button>
     <div class="container">
         <div class="portfolio">
             <header>
                 <h1>Mark Cyril Tubera</h1>
                 <p class="job-title">Software Engineer | API Integration Specialist</p>
-                <div class="social-links">
+                <nav class="social-links" aria-label="Social media links">
                     <a href="https://github.com/TheMbrk" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                     </a>
@@ -203,17 +24,17 @@
                     <a href="mailto:w.markcyriltubera@gmail.com" aria-label="Email">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     </a>
-                </div>
+                </nav>
             </header>
 
             <main>
-                <section id="about">
-                    <h2>About Me</h2>
+                <section id="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading">About Me</h2>
                     <p>Junior Software Engineer with over 3 years of experience in designing, developing, and maintaining web applications and APIs. Proficient in JavaScript, Python, and Java, with exposure to object-oriented programming and cloud technologies. Skilled in working on projects of varying scope, including individual programs and larger applications. Adept at learning new technologies, maintaining existing code, and collaborating within cross-functional teams in Agile environments. Strong problem-solving skills and a commitment to delivering high-quality solutions under time constraints.</p>
                 </section>
 
-                <section id="experience">
-                    <h2>Work Experience</h2>
+                <section id="experience" aria-labelledby="experience-heading">
+                    <h2 id="experience-heading">Work Experience</h2>
                     <div class="experience-item">
                         <h3>Software Engineer</h3>
                         <p class="company">Accenture, Inc. | June 2021 - July 2024</p>
@@ -232,113 +53,96 @@
                     </div>
                 </section>
 
-                <section id="education">
-                    <h2>Education</h2>
+                <section id="education" aria-labelledby="education-heading">
+                    <h2 id="education-heading">Education</h2>
                     <div class="education-item">
                         <h3>Bachelor of Science in Computer Engineering</h3>
                         <p class="university">University of the Cordilleras | 2015 - 2020</p>
                     </div>
                 </section>
 
-                <section id="skills">
-                    <h2>Skills</h2>
+                <section id="skills" aria-labelledby="skills-heading">
+                    <h2 id="skills-heading">Skills</h2>
                     <div class="skills">
                         <div class="skill-category">
                             <h3>Programming Languages</h3>
-                            <span class="skill">Python</span>
-                            <span class="skill">Java</span>
+                            <ul class="skill-list">
+                                <li class="skill">Python</li>
+                                <li class="skill">Java</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Front-End Development</h3>
-                            <span class="skill">HTML5</span>
-                            <span class="skill">CSS3</span>
-                            <span class="skill">JavaScript</span>
+                            <ul class="skill-list">
+                                <li class="skill">HTML5</li>
+                                <li class="skill">CSS3</li>
+                                <li class="skill">JavaScript</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Frameworks</h3>
-                            <span class="skill">Django</span>
-                            <span class="skill">Laravel</span>
+                            <ul class="skill-list">
+                                <li class="skill">Django</li>
+                                <li class="skill">Laravel</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>API Development & Integration</h3>
-                            <span class="skill">RESTful APIs</span>
-                            <span class="skill">SOAP APIs</span>
-                            <span class="skill">OAuth</span>
-                            <span class="skill">XML</span>
-                            <span class="skill">JSON</span>
-                            <span class="skill">API design</span>
-                            <span class="skill">API development</span>
-                            <span class="skill">API optimization</span>
+                            <ul class="skill-list">
+                                <li class="skill">RESTful APIs</li>
+                                <li class="skill">SOAP APIs</li>
+                                <li class="skill">OAuth</li>
+                                <li class="skill">XML</li>
+                                <li class="skill">JSON</li>
+                                <li class="skill">API design</li>
+                                <li class="skill">API development</li>
+                                <li class="skill">API optimization</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Cloud Technologies</h3>
-                            <span class="skill">Oracle Integration Cloud (OIC)</span>
-                            <span class="skill">SaaS</span>
-                            <span class="skill">PaaS</span>
-                            <span class="skill">AWS services</span>
+                            <ul class="skill-list">
+                                <li class="skill">Oracle Integration Cloud (OIC)</li>
+                                <li class="skill">SaaS</li>
+                                <li class="skill">PaaS</li>
+                                <li class="skill">AWS services</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Database Management</h3>
-                            <span class="skill">MySQL</span>
-                            <span class="skill">PostgreSQL</span>
-                            <span class="skill">Query optimization</span>
-                            <span class="skill">Schema design</span>
+                            <ul class="skill-list">
+                                <li class="skill">MySQL</li>
+                                <li class="skill">PostgreSQL</li>
+                                <li class="skill">Query optimization</li>
+                                <li class="skill">Schema design</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Version Control</h3>
-                            <span class="skill">Git</span>
-                            <span class="skill">GitHub</span>
+                            <ul class="skill-list">
+                                <li class="skill">Git</li>
+                                <li class="skill">GitHub</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Agile Methodologies</h3>
-                            <span class="skill">Agile development</span>
+                            <ul class="skill-list">
+                                <li class="skill">Agile development</li>
+                            </ul>
                         </div>
                         <div class="skill-category">
                             <h3>Soft Skills</h3>
-                            <span class="skill">Communication</span>
-                            <span class="skill">Teamwork</span>
-                            <span class="skill">Problem-solving</span>
-                            <span class="skill">Time management</span>
+                            <ul class="skill-list">
+                                <li class="skill">Communication</li>
+                                <li class="skill">Teamwork</li>
+                                <li class="skill">Problem-solving</li>
+                                <li class="skill">Time management</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
             </main>
         </div>
     </div>
-    <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const root = document.documentElement;
-        
-        themeToggle.addEventListener('click', () => {
-            if (root.style.getPropertyValue('--background-color') === '#f3f4f6') {
-                root.style.setProperty('--background-color', '#1f2937');
-                root.style.setProperty('--card-background', '#374151');
-                root.style.setProperty('--text-color', '#e5e7eb');
-                root.style.setProperty('--secondary-color', '#9ca3af');
-                themeToggle.textContent = '☀️';
-            } else {
-                root.style.setProperty('--background-color', '#f3f4f6');
-                root.style.setProperty('--card-background', 'white');
-                root.style.setProperty('--text-color', '#4b5563');
-                root.style.setProperty('--secondary-color', '#1f2937');
-                themeToggle.textContent = '🌓';
-            }
-        });
-
-        // Scroll animation
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
